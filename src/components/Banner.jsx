@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react'
 import { apiData } from './ContextApi'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   let data = useContext(apiData)
@@ -22,9 +23,9 @@ const Banner = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             {currentItems.map((item) => (
               <div key={item.id} className="w-full max-w-sm bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs">
-                <a href="#">
+                <Link to={`/ProductDetails/${item.id}`}>
                   <img className="rounded-base mb-6 h-60 w-full object-cover" src={item.thumbnail} alt={item.title} />
-                </a>
+                </Link>
                 <div>
                   <div className="flex items-center space-x-1 mb-4">
                     {[...Array(5)].map((_, index) => (
