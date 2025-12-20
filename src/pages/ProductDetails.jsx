@@ -19,9 +19,9 @@ const ProductDetails = () => {
   return (
     <div className="py-20">
       <div className="w-10/12 mx-auto">
-        <h1 className="text-3xl font-bold mb-6">{singleProduct.title}</h1>
-        <img src={singleProduct.thumbnail} alt={singleProduct.title} />
-        <p>{singleProduct.description}</p>
+        <img src={singleProduct.thumbnail} />
+        <h1 className="text-[23px] font-bold mb-6">{singleProduct.title}</h1>
+        <p className="text-[16px] w-150">{singleProduct.description}</p>
       </div>
     </div>
   );
