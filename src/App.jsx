@@ -4,9 +4,10 @@ import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails';
 import { Route, createRoutesFromElements,RouterProvider } from 'react-router-dom';
 import AddToCard from './pages/AddToCard';
+import OutLet from './components/OutLet';
 
 let router = createBrowserRouter(createRoutesFromElements(
-  <Route >
+  <Route element={<OutLet></OutLet>}>
     <Route path="/" element={<Home />} />
     <Route path="ProductDetails/:id" element={<ProductDetails />} />
     <Route path="AddToCard" element={<AddToCard></AddToCard>} />
