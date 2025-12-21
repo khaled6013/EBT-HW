@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -40,6 +40,9 @@ const ProductDetails = () => {
         </div>
         <h1 className="text-[23px] font-bold mb-6">{singleProduct.title}</h1>
         <p className="text-[16px] w-150">{singleProduct.description}</p>
+        <div className="mt-8">
+          <Link to="/AddToCard" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm cursor-pointer">Add to cart</Link>
+        </div>
       </div>
     </div>
   );
