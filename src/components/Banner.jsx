@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import { apiData } from './ContextApi'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Banner = () => {
   let data = useContext(apiData)
@@ -15,6 +16,9 @@ const Banner = () => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  let info = useSelector((state) => state.product.product);
+  console.log(info);
 
   return (
     <>

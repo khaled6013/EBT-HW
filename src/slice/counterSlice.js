@@ -1,26 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  cardItem: [],
-  value: 0,
+  product: "keyboard",
+  value: "hello world",
 }
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: 'product',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+   allProducts:(state)=>{
+    //  state.value = 0
+   }
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { allProducts } = counterSlice.actions
 
 export default counterSlice.reducer
