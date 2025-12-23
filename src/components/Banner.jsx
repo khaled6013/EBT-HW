@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <>
-      <section className='py-20'>
+      <section className='pb-20 pt-10 bg-gray-100'>
         <div className="w-10/12 mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-4">
             {currentItems.map((item) => (
